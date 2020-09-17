@@ -1,0 +1,73 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #000000;
+
+    overflow: hidden;
+}
+
+img {
+    position: fixed;
+    top: 0;
+
+    transform: translateY(0);
+
+    opacity: 0;
+    cursor: default;
+
+    width: 100%;
+    height: auto;
+
+    overflow: hidden;
+
+    user-select: none;
+
+    z-index: 10;
+
+    transition: 4s opacity ease, 4s transform ease-in-out, 4s top ease-in-out;
+}
+
+img.opacity {
+    opacity: 1;
+}
+
+img.loaded {
+    cursor: pointer;
+}
+
+img.moved {
+    top: 100%;
+
+    transform: translateY(-100%);
+}
+
+div {
+    position: fixed;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+
+    transform: translateY(-50%);
+
+    font-family: Marline, serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 8vw;
+
+    opacity: 0;
+
+    user-select: none;
+
+    transition: 1s opacity ease;
+}
+
+div.opacity {
+    opacity: 1;
+}
+
+@font-face {
+    font-family: Marline;
+    src: url(Marline.otf) format('opentype');
+}
